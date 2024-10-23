@@ -1,0 +1,84 @@
+
+{---------------------------------file name = App.jsx----------------------------------------------------}
+
+import logo from './logo.svg';
+import './App.css';
+import Button from './Button/Button';
+function App() {
+
+  const tealButton=()=>{
+    alert("Lightteal button clicked");
+  }
+
+  const lightBlue=()=>{
+    alert("lightBlue button clicked");
+  }
+
+  const lightSalmon=()=>{
+    alert("LightSalmon button clicked");
+  }
+
+  return (
+    <div className="App">
+      <h2>This is H2 tag</h2>
+    <Button ButtonText="MyButton"
+    Backgroundcolor="Teal" 
+     click={tealButton}/> 
+
+
+     <Button ButtonText="My"
+    Backgroundcolor="lightBlue"
+    click={lightBlue} />
+
+
+     <Button ButtonText="Button"
+    Backgroundcolor="lightSalmon" 
+     click={lightSalmon} />  
+    </div>
+  
+  );
+}
+
+
+export default App;
+
+
+{/*  passing arguments (props--> properties) of button
+  
+  <Button ButtonText="MyButton"
+Backgroundcolor="Teal"
+onClick={ButtonClicked}/>    // ButtonClicked is a fucntion name  
+*/}
+
+
+
+
+
+
+
+
+{--------------------------------file name = Button.jsx------------------------------------}
+import React from 'react'
+
+const Button =(props) => {   
+    console.log(props); // props recevies button function call from App.jsx 
+    const {ButtonText, Backgroundcolor, click}=props;   // should write this lind to implement elements
+  return (
+   <button style={{backgroundColor:Backgroundcolor}} onClick={click}>  
+    {ButtonText}
+    
+   </button>
+  )
+}
+
+export default Button
+
+
+
+// here props is a key Term to pass function
+
+// generic
+// by passing properties we make our button generic we can use it many ways instead in many pages (reusability)
+
+
+{/* <Button style={{Backgroundcolor:Red}}>    first {}for jsx and second {} for css */}
