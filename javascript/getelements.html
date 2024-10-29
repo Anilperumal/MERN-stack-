@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1">This is h1</h1>
+    <p id="par">This is paragraph</p>
+</body>
+</html>
+
+<script>
+    // to target items inside body we use getElementById("<idname>")
+        // we use getElementsByTags("<tagname>")
+            // here DOM is doing the conversion
+
+    console.log(document.getElementById("head1"));
+    console.log(document.getElementById("par"));
+    
+    // to only get value inside it we use .innerText (getElementById("").innerText)   or innerHTML
+    console.log(document.getElementById("head1").innerText);
+</script>

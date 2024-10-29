@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head"> head 1</h1>
+    <h1 class="head1"> head2 </h1>
+    <p class="head1"> head 4</p>
+    <div class="head1"> div 1</div>
+</body>
+</html>
+
+<script>
+    let ele=document.getElementsByClassName("head1");  // classes are multiple so they are stored in array
+    console.log(ele[1]);  // targeting array elements with their index
+    console.log(ele);
+</script>

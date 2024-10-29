@@ -1,0 +1,34 @@
+<!-- addEventListener(arg 1, arg 2)
+arg 1 -> here we use event name, but dont write "on" instead of ""onClick"" we use "click" 
+
+arg 2 -> we will pass a function which will trigger the event
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button> click me </button>
+</body>
+</html>
+
+<script>
+
+// addEventListener("event name",functionname())
+
+    let btn=document.querySelector("button");
+btn.addEventListener("click",function (){
+    alert("someone clicked me !!!!");
+})
+
+function oonclick(){
+    console.log("Someone clicked me !!!");
+}
+</script>

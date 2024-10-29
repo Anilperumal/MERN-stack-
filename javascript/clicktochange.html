@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="num">0</h1>
+    <button onclick="like()">Like</button>
+    <button onclick="unlike()">Unlike</button>
+    <p>No.of times button clicked</p>
+    <p id="n">0</p>
+</body>
+</html>
+
+<script>
+    let count=0,size=0;
+    function like(){
+        count++;
+        document.getElementById("num").innerText=count;
+        size++;
+        document.getElementById("n").innerText=size;
+    }
+    function unlike(){
+        count--;
+        document.getElementById("num").innerText=count;
+        size++;
+        document.getElementById("n").innerText=size;
+    }
+</script>

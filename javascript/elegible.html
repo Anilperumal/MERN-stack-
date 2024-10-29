@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Enter your age to check elegible to vote : </h2>
+    <input type="number" id="check" placeholder="Enter age" value=""/>
+    <button onclick="ageFunc()">submit</button>
+    <h3 id="elegible">elegible or not</h3>
+    <ul>
+        <li>if you are 18+ u are elegible !!!</li>
+        <li>else u are not elegible !!!</li>
+    </ul>
+</body>
+</html>
+
+<script>
+    function ageFunc(){
+        let age=document.getElementById("check").value;
+        if(age>=18) document.getElementById("elegible").innerText="You are Elegible";
+        else document.getElementById("elegible").innerText="You are NOT Elegible";
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+</html>
+
+<script>  
+
+// to create tag we use createElement("*tag-name*");
+    let heading=document.createElement("h1");
+
+    // to add text in that element we use below syntax
+    heading.innerText="hello this is h1 tag using js !!!";
+
+
+    // to display this tag to html we have to append it to body
+    let body=document.querySelector("body");
+
+    let divi=document.createElement("div");
+
+    divi.innerText="This is div tag";
+    divi.style.color="red";
+   
+    body.append(divi,heading,divi,divi);
+</script>

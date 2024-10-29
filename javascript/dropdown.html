@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="selectgen">
+        <option value="Select gender">Select gender</option>
+        <option value="male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+    <button onclick="getgenderFunc()">Get gender</button>
+    <h1 id="show">Show ur gender</h1>
+
+    <hr>
+
+    <h1 id="name1"> hi</h1>
+    <h2 id="name2"> hello</h2>
+    <h3 id="name3"> luffy</h3>
+    <hr> 
+    <input type="text" id="first" placeholder="First name" value=""/>
+    <input type="text" id="second" placeholder="last name" value=""/>
+    <input type="text" id="full" placeholder="Full name" value=""/>
+   <button onclick="firstFunc()">firstname</button>
+   <button onclick="lastFunc()">lastname</button>
+   <button onclick="fullName()">fullname</button>
+   <button onclick="resetFunc()">reset</button>
+</body>
+</html>
+
+<script>
+    let n1=document.getElementById("name1").innerText;
+    let n2=document.getElementById("name2").innerText;
+    let n3=document.getElementById("name3").innerText;
+    function getgenderFunc(){
+        let gender=document.getElementById("selectgen").value;
+        console.log(gender);
+        document.getElementById("show").innerText=gender;
+    }
+    function firstFunc(){
+        let name=document.getElementById("first").value;
+        document.getElementById("name1").innerText = name;
+    }
+    function lastFunc(){
+        let name=document.getElementById("second").value;
+        document.getElementById("name2").innerText = name;
+    }
+    function fullName(){
+        let name=document.getElementById("full").value;
+        document.getElementById("name3").innerText = name;
+    }
+    function resetFunc(){
+        document.getElementById("name1").innerText=n1;
+        document.getElementById("name2").innerText=n2;
+        document.getElementById("name3").innerText=n3;
+        document.getElementById("first").value="";
+        document.getElementById("second").value="";
+        document.getElementById("full").value="";
+    }
+</script>
