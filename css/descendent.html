@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: yellow;
+        }
+        /* this is a descendent selector here p is in div so to apply style
+        we write (div<space>p) it applies to children and their grand children too*/
+        div p{                  
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p> this is a paragraph tag</p>
+    <div>
+        <p>this is a para tag in div</p>
+        <h4>Holla amigos</h4>
+        <span><p>This is p tag in span </p></span>   
+        <!-- here p is in span is in div still style applied -->
+    </div>
+</body>
+</html>

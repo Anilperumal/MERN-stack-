@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #calculator{
+            width: 500px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;            border: 1px solid black;
+            margin: auto;
+           padding: 20px;      
+           border-radius: 20px;
+        }
+         #display{
+            height: 70px;
+            width: 100%;
+            margin: auto;
+            /* border: 1px solid black; */
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            border-radius: 16px;
+        }
+        #keys{    
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,70px);      
+            gap: 5px;      
+        }
+        #keys > div {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            border: 1px solid;
+            border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25)
+             0px 30px 60px -12px inset,
+              rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            font-weight: bold;
+        }
+        #keys > div:hover{
+            cursor: pointer;
+            background-color:cornsilk ;
+        }
+
+        .op{
+            background-color: black;
+            color: white;
+            }
+            .op:hover{
+                background-color: white;
+                color: black;
+            }
+        .clear{
+            background-color: red;
+            color: white;
+        }
+        .clear:hover{
+            background-color: white;
+            color: red;
+        }
+       #display{
+        font-size: 30px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+    </style>
+</head>
+<body>
+    <section id="calculator">
+        <div id="display"></div>
+        <div id="keys">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div class="op" >+</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div class="op" >-</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div class="op" >*</div>
+            <div class="clear" >AC</div>
+            <div>0</div>
+            <div class="op" >=</div>
+            <div class="op" >/</div>
+            
+    </div>
+    </section>
+</body>
+</html>
+
+<script>
+    let key = document.querySelectorAll("#keys>div");
+    let bag="";
+    for(let i=0;i<key.length;i++){
+        key[i]=addEventListener("click", mycals);
+    }
+
+    function mycals(){
+        let targettext=event.target.innerText;
+        if(targettext=="AC") {
+            bag="";
+            document.querySelector("#display").innerText =bag;
+        }
+        else if(targettext=="="){
+            bag=eval(bag);
+            document.querySelector("#display").innerText =bag;
+//          evaluate the numerical string and return the integer value eval(string)
+
+        }
+        else{
+            bag=bag + targettext;
+            document.querySelector("#display").innerText =bag;
+        }
+    }
+</script>

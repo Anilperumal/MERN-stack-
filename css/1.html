@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: rgb(175, 175, 13);
+            border-color: blue;
+        }
+        .para{
+            color: brown;
+            border-color: black;
+        }
+        #dicselector{
+           background-color: rgb(148, 223, 223);
+           border: 2px solid gold;
+        }
+        *{
+            font-style: italic;
+            border: 2px solid red;
+        }
+    </style>
+
+
+<!-- 
+Id selector -(#) has higher priority than class selector
+
+class selector - (.) has higher priority than tag names
+
+tag name - has high priority than universal selector
+
+universal selector - (only *) which applies styles for entire html code
+
+
+Inline style > Id >  class > tag > universal
+# > . > (tag name) > *
+
+
+### styling inside a tag is called inline selector
+-->
+
+
+
+
+</head>
+<body>
+    <p> this is p tag</p>
+    <div class="para" >
+        <h3>this is h3 heading tag</h3>
+        <p class="para" id="dicselector" style="border: 7px solid lightcoral;">this is p tag in div</p>
+    </div>
+</body>
+</html>

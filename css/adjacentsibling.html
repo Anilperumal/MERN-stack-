@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- adjacent sibling selector name itself says only used to apply style for adjacent tag -->
+    <style>
+         h3 + p{
+            background-color: sandybrown;
+    }
+    /* only adjacent to h3 is selected we can use not onlt tag name we can also use class name, id selector too */
+    </style>
+   
+</head>
+<body>
+    <p>Iam p tag paragraph</p>
+    <p>This is a p tag before h3</p>
+    <h3>This is heading tag</h3>
+    <p>This is para 1, general sibling of h3 </p>
+    <p>This is para 2, general sibling of h3 </p>
+    <p>This is para 3, general sibling of h3 </p>
+    <h3>H3 tag </h3>
+    <p>This is para 4, general sibling of h3 </p>
+</body>
+</html>

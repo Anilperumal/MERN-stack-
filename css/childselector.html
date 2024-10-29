@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    /* p{
+        background-color: black;
+        color: whitesmoke;
+    } */
+    /* here child selector is used (div>p) i.e., p who is only child of div is selected */
+    div > P{
+    background-color: blue;
+   }
+</style>
+</head>
+<body>
+    <p> this is a paragraph tag</p>
+    <div>
+        <p>this is a para tag in div</p>
+        <h4>Holla amigos</h4>
+        <span><p>This is p tag in span </p></span>   
+    <!-- here in p in span is not come under child selector since it is grandchild -->
+    </div>
+    <div>
+        <p>p tag in div 2</p>
+        <p>2nd p tag </p>
+        <span><p> 3rd p tag</p></span>
+    </div>
+</body>
+</html>
