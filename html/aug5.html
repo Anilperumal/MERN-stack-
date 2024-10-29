@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="firstname">Monkey</h1>
+    <div id="lastname"> .D. </div>
+    <p id="fullname">Luffy</p>
+    <hr>
+    <button onClick="first()"> First Name</button>
+    <button onClick="last()"> LastName</button>
+    <button onClick="full()"> Full name</button>
+    <button onClick="restore()"> default</button>
+</body>
+</html>
+
+<!-- to write javascript we use script tag -->
+
+<script>
+
+    function restore(){
+        document.getElementById("firstname").innerText="Monkey";
+        document.getElementById("lastname").innerText=".D.";
+        document.getElementById("fullname").innerText="Luffy";
+    }
+
+    function first(){
+        let name="Anil";
+        document.getElementById("firstname").innerText=name;
+    }
+    function last(){
+        let name="Perumal";
+        document.getElementById("lastname").innerText=name;
+    }
+    function full(){
+        let name="Anil Perumal";
+        document.getElementById("fullname").innerText=name;
+    }
+
+    
+</script>

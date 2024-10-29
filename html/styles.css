@@ -1,0 +1,12 @@
+/* styles.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 20px; /* Gap between columns and rows */
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
